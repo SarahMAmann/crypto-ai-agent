@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gnosis-py
+Version: 3.9.5
+Summary: gnosis-py is now safe-eth-py
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
+Requires-Dist: safe-eth-py
+
+# gnosis-py is now safe-eth-py
+
+This package has been renamed. Use `pip install safe-eth-py` instead.
+
+New package:
+    - https://pypi.org/project/safe-eth-py/
+    - https://github.com/safe-global/safe-eth-py

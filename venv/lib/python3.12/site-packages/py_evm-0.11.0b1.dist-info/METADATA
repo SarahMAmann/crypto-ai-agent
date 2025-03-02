@@ -1,0 +1,156 @@
+Metadata-Version: 2.2
+Name: py-evm
+Version: 0.11.0b1
+Summary: Python implementation of the Ethereum Virtual Machine
+Home-page: https://github.com/ethereum/py-evm
+Author: Ethereum Foundation
+Author-email: snakecharmers@ethereum.org
+License: MIT
+Keywords: ethereum blockchain evm
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: cached-property>=1.5.1
+Requires-Dist: eth-bloom>=1.0.3
+Requires-Dist: eth-keys>=0.4.0
+Requires-Dist: eth-typing>=3.3.0
+Requires-Dist: eth-utils>=2.0.0
+Requires-Dist: lru-dict>=1.1.6
+Requires-Dist: py-ecc>=1.4.7
+Requires-Dist: rlp>=3.0.0
+Requires-Dist: trie>=2.0.0
+Requires-Dist: ckzg>=2.0.0
+Provides-Extra: benchmark
+Requires-Dist: termcolor>=1.1.0; extra == "benchmark"
+Requires-Dist: web3>=6.0.0; extra == "benchmark"
+Provides-Extra: dev
+Requires-Dist: build>=0.9.0; extra == "dev"
+Requires-Dist: bump_my_version>=0.19.0; extra == "dev"
+Requires-Dist: ipython; extra == "dev"
+Requires-Dist: mypy==1.10.0; extra == "dev"
+Requires-Dist: pre-commit>=3.4.0; extra == "dev"
+Requires-Dist: tox>=4.0.0; extra == "dev"
+Requires-Dist: twine; extra == "dev"
+Requires-Dist: wheel; extra == "dev"
+Requires-Dist: py-evm>=0.8.0b1; extra == "dev"
+Requires-Dist: sphinx>=6.0.0; extra == "dev"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "dev"
+Requires-Dist: sphinx_rtd_theme>=1.0.0; extra == "dev"
+Requires-Dist: sphinxcontrib-asyncio>=0.2.0; extra == "dev"
+Requires-Dist: towncrier<25,>=24; extra == "dev"
+Requires-Dist: cached-property>=1.5.1; extra == "dev"
+Requires-Dist: eth-bloom>=1.0.3; extra == "dev"
+Requires-Dist: eth-keys>=0.4.0; extra == "dev"
+Requires-Dist: eth-typing>=3.3.0; extra == "dev"
+Requires-Dist: eth-utils>=2.0.0; extra == "dev"
+Requires-Dist: lru-dict>=1.1.6; extra == "dev"
+Requires-Dist: py-ecc>=1.4.7; extra == "dev"
+Requires-Dist: rlp>=3.0.0; extra == "dev"
+Requires-Dist: trie>=2.0.0; extra == "dev"
+Requires-Dist: ckzg>=2.0.0; extra == "dev"
+Requires-Dist: factory-boy>=3.0.0; extra == "dev"
+Requires-Dist: hypothesis<7,>=6; extra == "dev"
+Requires-Dist: pytest>=7.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "dev"
+Requires-Dist: pytest-cov>=4.0.0; extra == "dev"
+Requires-Dist: pytest-timeout>=2.0.0; extra == "dev"
+Requires-Dist: pytest-xdist>=3.0; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: py-evm>=0.8.0b1; extra == "docs"
+Requires-Dist: sphinx>=6.0.0; extra == "docs"
+Requires-Dist: sphinx-autobuild>=2021.3.14; extra == "docs"
+Requires-Dist: sphinx_rtd_theme>=1.0.0; extra == "docs"
+Requires-Dist: sphinxcontrib-asyncio>=0.2.0; extra == "docs"
+Requires-Dist: towncrier<25,>=24; extra == "docs"
+Provides-Extra: eth
+Requires-Dist: cached-property>=1.5.1; extra == "eth"
+Requires-Dist: eth-bloom>=1.0.3; extra == "eth"
+Requires-Dist: eth-keys>=0.4.0; extra == "eth"
+Requires-Dist: eth-typing>=3.3.0; extra == "eth"
+Requires-Dist: eth-utils>=2.0.0; extra == "eth"
+Requires-Dist: lru-dict>=1.1.6; extra == "eth"
+Requires-Dist: py-ecc>=1.4.7; extra == "eth"
+Requires-Dist: rlp>=3.0.0; extra == "eth"
+Requires-Dist: trie>=2.0.0; extra == "eth"
+Requires-Dist: ckzg>=2.0.0; extra == "eth"
+Provides-Extra: eth-extra
+Requires-Dist: blake2b-py>=0.2.0; extra == "eth-extra"
+Requires-Dist: coincurve>=18.0.0; extra == "eth-extra"
+Provides-Extra: test
+Requires-Dist: factory-boy>=3.0.0; extra == "test"
+Requires-Dist: hypothesis<7,>=6; extra == "test"
+Requires-Dist: pytest>=7.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.20.0; extra == "test"
+Requires-Dist: pytest-cov>=4.0.0; extra == "test"
+Requires-Dist: pytest-timeout>=2.0.0; extra == "test"
+Requires-Dist: pytest-xdist>=3.0; extra == "test"
+Dynamic: author
+Dynamic: author-email
+Dynamic: classifier
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: keywords
+Dynamic: license
+Dynamic: provides-extra
+Dynamic: requires-dist
+Dynamic: requires-python
+Dynamic: summary
+
+# Python Implementation of the Ethereum protocol
+
+[![Join the conversation on Discord](https://img.shields.io/discord/809793915578089484?color=blue&label=chat&logo=discord&logoColor=white)](https://discord.gg/GHryRvPB84)
+[![Build Status](https://circleci.com/gh/ethereum/py-evm.svg?style=shield)](https://circleci.com/gh/ethereum/py-evm)
+[![PyPI version](https://badge.fury.io/py/py-evm.svg)](https://badge.fury.io/py/py-evm)
+[![Python versions](https://img.shields.io/pypi/pyversions/py-evm.svg)](https://pypi.python.org/pypi/py-evm)
+[![Docs build](https://readthedocs.org/projects/py-evm/badge/?version=latest)](https://py-evm.readthedocs.io/en/latest/?badge=latest)
+
+## Py-EVM
+
+Py-EVM is an implementation of the Ethereum protocol in Python. It contains the low level
+primitives for the original proof-of-work (POW), (formerly known as Ethereum 1.0) chain
+as well as emerging support for the proof-of-stake (POS) (formerly known as Ethereum 2.0) spec.
+
+### Goals
+
+Py-EVM aims to eventually become the defacto Python implementation of the Ethereum protocol,
+enabling a wide array of use cases for both public and private chains.
+
+In particular Py-EVM aims to:
+
+- be a reference implementation of the Ethereum POW and POS implementations in one of the most widely used and understood languages, Python.
+
+- be easy to understand and modifiable
+
+- have clear and simple APIs
+
+- come with solid, friendly documentation
+
+- deliver the low level primitives to build various clients on top (including *full* and *light* clients)
+
+- be highly flexible to support both research as well as alternate use cases like private chains.
+
+## Installation
+
+```sh
+python -m pip install py-evm
+```
+
+## Documentation
+
+[Get started in 5 minutes](https://py-evm.readthedocs.io/en/latest/guides/building_an_app_that_uses_pyevm.html)
+
+Check out the [documentation on our official website](https://py-evm.readthedocs.io/en/latest/)
+
+View the [change log](https://py-evm.readthedocs.io/en/latest/release_notes.html).
